@@ -1,0 +1,169 @@
+/* Basic Reset and Variables */
+:root {
+    --primary-color: #5D4037; /* Earthy Brown/Maroon for elegance */
+    --accent-color: #FBC02D;  /* Gold/Mustard for pop */
+    --text-color: #333;
+    --light-bg: #F9F9F9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif; /* Use a clean, readable font */
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* 1. NAVIGATION BAR */
+header {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+nav h1 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* 2. HERO SECTION */
+#hero {
+    position: relative;
+    height: 90vh; /* Takes up most of the screen height */
+    overflow: hidden;
+    text-align: center;
+}
+
+#hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8; /* Make the image slightly darker for text contrast */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.4); /* Dark background for readability */
+    padding: 2rem 3rem;
+    border-radius: 8px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #FFC947; /* Slightly lighter gold */
+}
+
+/* 3. GALLERY SECTION */
+#gallery {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: var(--light-bg);
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.design-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.design-item img:hover {
+    transform: scale(1.02);
+}
+
+/* 4. SERVICES & CONTACT SECTIONS */
+#services, #contact {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#services ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.5rem;
+}
+
+#services ul li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+#services ul li::before {
+    content: '★'; /* Simple star bullet point */
+    color: var(--accent-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* 6. FOOTER */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.8rem;
+}
